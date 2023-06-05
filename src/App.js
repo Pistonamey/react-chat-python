@@ -2,7 +2,7 @@ import { io } from "socket.io-client";
 import { useEffect, useState } from "react";
 
 
-const socket = io("https://new-try-fast-api.herokuapp.com", { path: '/sockets' });
+const socket = io("https://new-try-fast-api.herokuapp.com/", { path: '/sockets' });
 
 function App() {
 
