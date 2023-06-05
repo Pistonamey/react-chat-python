@@ -1,8 +1,8 @@
-import {io} from "socket.io-client";
+import { io } from "socket.io-client";
 import { useEffect, useState } from "react";
 
 
-const socket = io("http://127.0.0.1:8000",{path:'/sockets'});
+const socket = io("https://new-try-fast-api.herokuapp.com", { path: '/sockets' });
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
   const joinRoom = () => {
     if (room !== "") {
       console.log(room)
-      socket.emit("join_room", {room:room});
+      socket.emit("join_room", { room: room });
     }
   };
 
